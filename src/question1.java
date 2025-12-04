@@ -2,9 +2,11 @@
 
 abstract class Vehicle{
     private String brand;
+    public static int noOfVehicles=0;
     //constructor
     Vehicle(String brand){
         this.brand = brand;
+        noOfVehicles++;
     }
     String getDetails(){
         return brand;
@@ -45,5 +47,6 @@ public class question1{
         for(int i = 0; i < vehicles.length; i++){
             vehicles[i].printDetails();
         }
+        System.out.println(Vehicle.noOfVehicles);
     }
 }
